@@ -2,3 +2,4 @@
 
 cp -r ~/.i3 .
 cp -r ~/.config/i3 .
+cp -r ~/.fonts .
