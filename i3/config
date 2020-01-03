@@ -132,10 +132,11 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # Window assignments
 
 assign [class="brave-browser-beta"] $ws3
+assign [class="Brave-browser-beta"] $ws3
 assign [class="st"] $ws2
-assign [class="jetbrains-idea-ce"] $ws4
-assign [class="code"] $ws4
-assign [class="code-insiders"] $ws4
+assign [class="Jetbrains-idea-ce"] $ws4
+assign [class="Code"] $ws4
+assign [class="Code-insiders"] $ws4
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
