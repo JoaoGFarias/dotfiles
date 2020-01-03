@@ -98,7 +98,7 @@ set $ws1 "1"
 set $ws2 "2: Terminals "
 set $ws3 "3: Browsers "
 set $ws4 "4: Editors "
-set $ws5 "5: Music "
+set $ws5 "5: Music "
 set $ws6 "6: Others"
 set $ws7 "7"
 set $ws8 "8"
@@ -133,6 +133,9 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 assign [class="brave-browser-beta"] $ws3
 assign [class="st"] $ws2
+assign [class="jetbrains-idea-ce"] $ws4
+assign [class="code"] $ws4
+assign [class="code-insiders"] $ws4
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
