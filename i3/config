@@ -36,11 +36,11 @@ bindsym $mod+Return exec st
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+bindsym $mod+p exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+# bindsym $mod+p exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+j focus left
@@ -99,8 +99,8 @@ set $ws2 "2: Terminals "
 set $ws3 "3: Browsers "
 set $ws4 "4: Editors "
 set $ws5 "5: Music "
-set $ws6 "6: Others"
-set $ws7 "7"
+set $ws6 "6: Reading "
+set $ws7 "7: Others"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
@@ -131,12 +131,17 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 # Window assignments
 
+assign [class="Spotify"] $ws5
 assign [class="brave-browser-beta"] $ws3
 assign [class="Brave-browser-beta"] $ws3
+assign [class="brave-browser"] $ws3
+assign [class="Brave-browser"] $ws3
 assign [class="st"] $ws2
 assign [class="Jetbrains-idea-ce"] $ws4
 assign [class="Code"] $ws4
 assign [class="Code-insiders"] $ws4
+assign [class="Simplenote"] $ws4
+assign [class="calibre"] $ws6
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -204,7 +209,7 @@ bar {
 hide_edge_borders both
 
 # Locking i3 bidding
-bindsym $mod+p exec i3lock --color "$bg-color"
+bindsym $mod+Shift+w exec i3lock --color "$bg-color"
 
 
 # Media player controls
@@ -219,3 +224,5 @@ bindsym XF86AudioPrev exec playerctl previous
 # exec_always app_to_load_on_i3_reload
 exec_always feh --bg-scale ~/Documents/wallpaper.jpg
 exec_always xrandr --output eDP --mode 1920x1080 --pos 1920x0 --rotate normal --output HDMI-A-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal
+exec_always redshift-gtk
+exec_always dropbox autostart
