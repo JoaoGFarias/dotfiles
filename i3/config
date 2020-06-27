@@ -133,17 +133,22 @@ bindsym $mod+Ctrl+0 move container to workspace $ws10
 
 # Window assignments
 
-assign [class="Spotify"] $ws5
+assign [class="Slack"] $ws1
+assign [class="discord"] $ws1
+assign [class="Spotify Premium"] $ws5
 assign [class="brave-browser-beta"] $ws3
 assign [class="Brave-browser-beta"] $ws3
 assign [class="brave-browser"] $ws3
 assign [class="Brave-browser"] $ws3
 assign [class="st"] $ws2
-assign [class="Jetbrains-idea-ce"] $ws4
+assign [class="jetbrains-idea-ce"] $ws4
 assign [class="Code"] $ws4
 assign [class="Code-insiders"] $ws4
 assign [class="Simplenote"] $ws4
 assign [class="calibre"] $ws6
+
+# Floating programs
+for_window [class="kruler"] floating enable
 
 # reload the configuration file
 bindsym $mod+c reload
@@ -229,3 +234,5 @@ exec_always feh --bg-scale ~/.config/wallpapers/wallpaper.jpg
 exec_always xrandr --output eDP --mode 1920x1080 --pos 1920x0 --rotate normal --output HDMI-A-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal
 exec_always dropbox autostart
 exec_always redshift -b 0.6
+exec_always brave-browser
+exec_always gnome-pomodoro --no-default-window

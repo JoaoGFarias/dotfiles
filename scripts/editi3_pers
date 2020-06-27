@@ -1,0 +1,3 @@
+#!/bin/sh
+
+code ~/.config/i3
