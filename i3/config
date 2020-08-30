@@ -9,7 +9,7 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod1
+set $mod Mod4
 
 set $font San Fracisco Display 14, FontAwesome 14
 
@@ -39,10 +39,6 @@ bindsym $mod+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+p exec dmenu_run
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+p exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+j focus left
@@ -156,6 +152,8 @@ bindsym $mod+c reload
 bindsym $mod+b restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+e exec "i3-nagbar -t warning -m 'Lets get out of here?' -B 'Yep, move on' 'i3-msg exit'"
+# force exit i3
+bindsym $mod+Ctrl+e exec "skill -KILL -u joao"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -217,7 +215,7 @@ bar {
 hide_edge_borders both
 
 # Locking i3 bidding
-bindsym $mod+l exec i3lock --color "$bg-color"
+bindsym $mod+l exec --no-startup-id lockscreen
 
 
 # Media player controls
@@ -232,7 +230,9 @@ bindsym XF86AudioPrev exec playerctl previous
 # exec_always app_to_load_on_i3_reload
 exec_always feh --bg-scale ~/.config/wallpapers/wallpaper.jpg
 exec_always xrandr --output eDP --mode 1920x1080 --pos 1920x0 --rotate normal --output HDMI-A-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal
-exec_always dropbox autostart
+exec_always killall redshift
 exec_always redshift -b 0.6
 exec_always brave-browser
 exec_always gnome-pomodoro --no-default-window
+exec_always dropbox autostart y
+exec_always dropbox start
