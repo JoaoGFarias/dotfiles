@@ -1,3 +1,3 @@
 #!/bin/sh
 
-sudo mkdir /media/root/SEC_DATA && sudo mount /dev/sda1 /media/root/SEC_DATA
+sudo mkdir /media/root/SEC_DATA && sudo mount /dev/sdb1 /media/root/SEC_DATA

@@ -224,6 +224,9 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+# Surfraw on Menu
+bindsym $mod+Mod1+s exec ~/.local/bin/menu-surfraw
+
 
 # Startup applications
 # exec my_awesome_app
@@ -231,8 +234,7 @@ bindsym XF86AudioPrev exec playerctl previous
 exec_always feh --bg-scale ~/.config/wallpapers/wallpaper.jpg
 exec_always xrandr --output eDP --mode 1920x1080 --pos 1920x0 --rotate normal --output HDMI-A-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal
 exec_always killall redshift
-exec_always redshift -b 0.6
-exec_always brave-browser
 exec_always gnome-pomodoro --no-default-window
 exec_always dropbox autostart y
 exec_always dropbox start
+exec_always redshift -b 0.6

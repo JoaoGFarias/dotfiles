@@ -1,3 +1,5 @@
 #!/bin/sh
 
-/opt/joplin/Joplin-1.0.224.AppImage
+file="Joplin-1.2.6.AppImage"
+chmod +x /opt/joplin/$file
+/opt/joplin/$file
