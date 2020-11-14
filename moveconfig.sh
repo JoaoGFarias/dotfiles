@@ -8,5 +8,6 @@ cp -r ~/.zshrc .
 cp -r ~/.gtkrc-2.0 .
 cp -r ~/.icons .
 cp -r ~/.xinitrc .
+cp -r ~/.profile .
 cp -r ~/.config/wallpapers/* ./wallpapers
 cp -r ~/.local/bin/personal/* ./scripts
