@@ -231,7 +231,7 @@ bindsym $mod+Mod1+s exec ~/.local/bin/menu-surfraw
 # Startup applications
 # exec my_awesome_app
 # exec_always app_to_load_on_i3_reload
-exec_always feh --bg-scale ~/.config/wallpapers/wallpaper.jpg
+exec_always feh --randomize --bg-scale ~/.config/wallpapers
 exec_always xrandr --output eDP --mode 1920x1080 --pos 1920x0 --rotate normal --output HDMI-A-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal
 exec_always killall redshift
 exec_always gnome-pomodoro --no-default-window

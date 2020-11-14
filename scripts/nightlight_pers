@@ -1,4 +1,4 @@
 #!/bin/sh
 
-nohup killall redshift &
-nohup redshift -b 0.6 &
+killall redshift &
+sleep 1 && redshift -b 0.6 &
