@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cd /home/joao/Documents/GitHub/dotfiles
+make move && git add . && git commit -m "$0" && git push

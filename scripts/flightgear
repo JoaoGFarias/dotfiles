@@ -1,0 +1,3 @@
+#!/bin/sh
+
+sudo /media/root/DATA1/games/flightgear/dnc-managed/run_fgfs.sh --launcher

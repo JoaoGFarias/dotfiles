@@ -185,6 +185,22 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# One key stroke resize
+
+# Pressing down will grow the window’s height.
+bindsym $mod+Mod1+j resize shrink width 10 px or 10 ppt
+bindsym $mod+Mod1+k resize grow height 10 px or 10 ppt
+bindsym $mod+Mod1+l resize shrink height 10 px or 10 ppt
+bindsym $mod+Mod1+semicolon resize grow width 10 px or 10 ppt
+
+# same bindings, but for the arrow keys
+bindsym $mod+Mod1+Left resize shrink width 10 px or 10 ppt
+bindsym $mod+Mod1+Down resize grow height 10 px or 10 ppt
+bindsym $mod+Mod1+Up resize shrink height 10 px or 10 ppt
+bindsym $mod+Mod1+Right resize grow width 10 px or 10 ppt
+
+
+
 # Bar colors
 set $bg-color 	         #2f343f
 set $inactive-bg-color   #2f343f
@@ -215,7 +231,7 @@ bar {
 	}
 }
 
-hide_edge_borders both
+#hide_edge_borders both
 
 # Locking i3 bidding
 bindsym $mod+l exec --no-startup-id lockscreen
