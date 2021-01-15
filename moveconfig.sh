@@ -11,3 +11,6 @@ cp -r ~/.xinitrc .
 cp -r ~/.profile .
 cp -r ~/.config/wallpapers/* ./wallpapers
 cp -r ~/.local/bin/personal/* ./scripts
+cp -r ~/.local/bin/menu-surfraw ./.local/bin
+cp -r ~/.local/bin/menu-surfraw ./.local/bin
+cp -r ~/.config/surfraw/ ./.config/surfraw/ 
