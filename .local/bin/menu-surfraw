@@ -7,7 +7,7 @@
 # it in your browser of choice.
 
 # Edit here to change what browser you open links in
-browser="/usr/bin/firefox"
+browser="/usr/bin/brave"
 
 usage() {
     echo "Usage: $0 [OPTIONS] [ELVIS [SEARCHTERM]]
