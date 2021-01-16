@@ -247,6 +247,17 @@ bindsym XF86AudioPrev exec playerctl previous
 # Surfraw on Menu
 bindsym $mod+Mod1+s exec ~/.local/bin/menu-surfraw
 
+# rofi bindings fancy menu
+bindsym F9 exec rofi -modi drun -show drun -line-padding 4 \
+                -columns 2 -padding 50 -hide-scrollbar \
+                -show-icons -drun-icon-theme "Arc-X-D" -font "Droid Sans Regular 10"
+
+bindsym F10 exec rofi -show window -line-padding 4 \
+                -lines 6 -padding 50 -hide-scrollbar \
+                -show-icons -drun-icon-theme "Arc-X-D" -font "Droid Sans Regular 10"
+
+
+
 # Startup applications
 # exec my_awesome_app
 # exec_always app_to_load_on_i3_reload
