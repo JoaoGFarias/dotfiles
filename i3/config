@@ -245,7 +245,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # Surfraw on Menu
-bindsym $mod+Mod1+s exec ~/.local/bin/menu-surfraw
+bindsym F11 exec ~/.local/bin/menu-surfraw
 
 # rofi bindings fancy menu
 bindsym F9 exec rofi -modi drun -show drun -line-padding 4 \
