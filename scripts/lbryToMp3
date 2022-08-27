@@ -1,0 +1,12 @@
+#!/bin/sh
+
+url=$1
+filename=$(basename "$url")
+audioName=$filename.mp3
+echo "Downloading Video from LBRY"
+wget "$url"
+echo "Converting video to mp3"
+ffmpeg -i $url $audioName
+echo "Deleting video file"
+rm -rf $filename
+echo "Your MP3 is called $audioName"

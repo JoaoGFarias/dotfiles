@@ -7,7 +7,7 @@
 set $mod Mod4
 
 # workspace layouts:
-workspace_layout default
+workspace_layout stacking
 
 # get auth work with polkit-gnome
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -89,9 +89,12 @@ bindsym $mod+a focus parent
 bindsym $mod+Ctrl+w exec "change_wallpaper"
 
 #workspace-edit
-set $ws2 "1:Terminals "
-set $ws3 "2:Browser "
-set $ws4 "3:Files "
+set $ws1 "1:Terminals "
+set $ws2 "2:Browser "
+set $ws3 "3:Files "
+set $ws4 "4:Chat "
+set $ws5 "5:Code "
+
 
 #bind program to workspace
 assign [class="lxterminal"] $ws1
@@ -102,6 +105,8 @@ assign [class="Pcmanfm"] $ws3
 for_window [class=Pcmanfm] focus
 assign [class="brave"] $ws3
 for_window [class=brave] focus
+assign [class="discord-ptb"] $ws4
+assign [class="slack"] $ws4
 
 # Autostart apps
 exec --no-startup-id picom -cC
@@ -266,7 +271,7 @@ bindsym Print exec "flameshot gui"
 #bindsym Print exec "scrot ~/%Y-%m-%d-%T-screenshot.png"
 
 # rofi bindings simple menu
-#bindsym F9 exec rofi -modi drun -show drun -lines 7
+#bindsym F9 exzec rofi -modi drun -show drun -lines 7
 #bindsym F10 exec rofi -show run   -lines 7
 bindsym F12 exec rofi -show window -lines 7
 
@@ -307,7 +312,6 @@ bindsym F10 exec rofi -show window -line-padding 4 \
 bindsym $mod+Mod1+A exec pavucontrol
 
 
-exec_always xrandr --output eDP --mode 1920x1080 --pos 1920x0 --rotate normal --output HDMI-A-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal
 exec_always pulseaudio
 
 exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
@@ -320,3 +324,8 @@ exec_always change_wallpaper
 #exec_always sudo ntpd -qg
 #exec_always sudo joplin
 exec_always killall pavucontrol
+exec_always discord-ptb
+exec_always slack
+exec_always joplin-desktop
+exec_always xrandr --output eDP --mode 1920x1080 --pos 1920x0 --rotate normal --output HDMI-A-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal
+exec "sleep 5;  change_wallpaper"
